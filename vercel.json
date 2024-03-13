@@ -9,7 +9,7 @@
 		{
 			"src": "src/schemas/**",
 			"use": "@vercel/node",
-			"config": { "includeFiles": ["src/schemas/**"] },
+			"config": { "includeFiles": ["src/schemas/**"] }
 		},
 		{
 			"src": "public/**",
