@@ -4,12 +4,12 @@
 		{
 			"src": "dist/index.js",
 			"use": "@vercel/node",
-			"config": { "includeFiles": ["src/**"] }
+			"config": { "includeFiles": ["dist/**"] }
 		},
 		{
 			"src": "dist/schemas/**",
 			"use": "@vercel/node",
-			"config": { "includeFiles": ["src/schemas/**"] }
+			"config": { "includeFiles": ["dist/schemas/**"] }
 		},
 		{
 			"src": "public/**",
