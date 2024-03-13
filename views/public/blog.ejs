@@ -3,11 +3,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Post 1 Headline">
+    <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>EPAS CNTV | <%= post.title %></title>
+    <title>Blog</title>
     <link rel="stylesheet" href="/../nicepage.css" media="screen">
-    <link rel="stylesheet" href="/../Post-Template.css" media="screen">
+    <link rel="stylesheet" href="/../Blog-Template.css" media="screen">
     <script class="u-script" type="text/javascript" src="/../jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="/../nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet"
@@ -20,7 +20,7 @@
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Ambasadori CNTV",
-            "logo": "/images/logo-cntv-xxsmall.png"
+            "logo": "images/logo-cntv-xxsmall.png"
         }</script>
     <meta name="theme-color" content="#0a5794">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
@@ -30,7 +30,7 @@
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <a href="https://epas-cntv.vercel.app" class="u-image u-logo u-image-1" data-image-width="236"
            data-image-height="236" title="EPAS CNTV">
-            <img src="../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
+            <img src="/../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
              data-responsive-from="MD" data-position="">
@@ -64,15 +64,15 @@
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre">Proiecte</a>
+                                            href="/despre#team">Echipa</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre">Echipa</a>
+                                            href="/despre#projects">Proiecte</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre">Social Media</a>
+                                            href="/despre#social">Social Media</a>
                                 </li>
                             </ul>
                         </div>
@@ -105,11 +105,11 @@
                             <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Despre Noi</a>
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Proiecte</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#team">Echipa</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Echipa</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#projects">Proiecte</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Social
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#social">Social
                                                 Media</a>
                                         </li>
                                     </ul>
@@ -133,22 +133,48 @@
         </nav>
     </div>
 </header>
-<section class="u-align-center u-clearfix u-section-1" id="sec-e113">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
-            <div class="u-container-layout u-valign-top u-container-layout-1">
-                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                     src="<%= `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}` %>">
-                <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                    <span class="u-meta-author u-meta-icon"><%= post.author %></span>
-                    <span class="u-meta-date u-meta-icon"><%= new Date(post.date).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' }) %></span>
-                    <span class="u-meta-category u-meta-icon"><%= post.tags.join(', ') %></span>
+<section class="u-align-center u-clearfix u-container-align-center u-palette-1-base u-section-1" id="sec-d06d">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-title u-text-1">Blog Posts </h1>
+        <p class="u-align-center u-large-text u-text u-text-variant u-text-2">razvane ar fi bine sa scrii ceva si aici
+            mersi :)</p>
+    </div>
+</section>
+<section class="u-clearfix u-section-2" id="sec-f8f4">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-blog u-expanded-width u-blog-1">
+            <div class="u-list-control"></div>
+            <div class="u-repeater u-repeater-1">
+                <%
+                let count = 1;
+                posts.forEach(post => {
+                    const href = `/blog/${post._id}`;
+                    const thumbnail = `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}`;
+                %>
+                <div class="u-blog-post u-container-style u-repeater-item u-white u-repeater-item-1">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                        <h4 class="u-blog-control u-text u-text-1">
+                            <a class="u-post-header-link" href="<%= href %>"><%= post.title %></a>
+                        </h4>
+                        <a class="u-post-header-link" href="<%= href %>"><img alt=""
+                                                                              class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
+                                                                              src="<%= thumbnail %>"></a>
+                        <div class="u-blog-control u-post-content u-text u-text-4 fr-view">
+                            <%= post.content > 100 ? post.content.substring(0, 100) + '...' : post.content %>
+                        </div>
+                        <a href="<%= href %>"
+                           class="u-blog-control u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-1">
+                            Deschide
+                            postarea
+                        </a>
+                    </div>
                 </div>
-                <h2 class="u-align-center u-blog-control u-text u-text-1"><%= post.title %></h2>
-                <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view">
-                    <%= post.content %>
-                </div>
+                <%
+                    count++;
+                });
+                %>
             </div>
+            <div class="u-list-control"></div>
         </div>
     </div>
 </section>
