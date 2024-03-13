@@ -138,7 +138,7 @@
         <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
             <div class="u-container-layout u-valign-top u-container-layout-1">
                 <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                     src="<%= `data:${post.thumbnail.contentType};${post.thumbnail.data}` %>">
+                     src="<%= `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}` %>">
                 <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
                     <span class="u-meta-author u-meta-icon"><%= post.author %></span>
                     <span class="u-meta-date u-meta-icon"><%= new Date(post.date).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' }) %></span>

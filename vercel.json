@@ -2,23 +2,23 @@
 	"version": 2,
 	"builds": [
 		{
-			"src": "dist/index.js",
+			"src": "src/index.ts",
 			"use": "@vercel/node",
-			"config": { "includeFiles": ["dist/**"] }
+			"config": { "includeFiles": ["src/**"] }
 		},
 		{
-			"src": "prod/public/**",
+			"src": "public/**",
 			"use": "@now/static"
 		},
 		{
-			"src": "prod/views/**",
+			"src": "views/**",
 			"use": "@now/static"
 		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "dist/index.js"
+			"dest": "src/index.ts"
 		}
 	]
 }

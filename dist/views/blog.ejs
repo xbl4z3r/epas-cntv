@@ -30,7 +30,7 @@
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <a href="https://epas-cntv.vercel.app" class="u-image u-logo u-image-1" data-image-width="236"
            data-image-height="236" title="EPAS CNTV">
-            <img src="../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
+            <img src="/../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
              data-responsive-from="MD" data-position="">
@@ -136,7 +136,8 @@
 <section class="u-align-center u-clearfix u-container-align-center u-palette-1-base u-section-1" id="sec-d06d">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-align-center u-text u-text-default u-title u-text-1">Blog Posts </h1>
-        <p class="u-align-center u-large-text u-text u-text-variant u-text-2">razvane ar fi bine sa scrii ceva si aici mersi :)</p>
+        <p class="u-align-center u-large-text u-text u-text-variant u-text-2">razvane ar fi bine sa scrii ceva si aici
+            mersi :)</p>
     </div>
 </section>
 <section class="u-clearfix u-section-2" id="sec-f8f4">
@@ -148,7 +149,7 @@
                 let count = 1;
                 posts.forEach(post => {
                     const href = `/blog/${post._id}`;
-                    const thumbnail = `data:${post.thumbnail.contentType};${post.thumbnail.data}`;
+                    const thumbnail = `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}`;
                 %>
                 <div class="u-blog-post u-container-style u-repeater-item u-white u-repeater-item-1">
                     <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
@@ -159,7 +160,7 @@
                                                                               class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
                                                                               src="<%= thumbnail %>"></a>
                         <div class="u-blog-control u-post-content u-text u-text-4 fr-view">
-                            <%= post.content %>
+                            <%= post.content > 100 ? post.content.substring(0, 100) + '...' : post.content %>
                         </div>
                         <a href="<%= href %>"
                            class="u-blog-control u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-1">
