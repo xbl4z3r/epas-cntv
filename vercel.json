@@ -4,7 +4,10 @@
 		{
 			"src": "src/index.ts",
 			"use": "@vercel/node",
-			"config": { "zeroConfig": true, "includeFiles": ["src/**"] }
+			"config": { "includeFiles": ["src/**"] }
+		},
+		{
+			""
 		},
 		{
 			"src": "public/**",
