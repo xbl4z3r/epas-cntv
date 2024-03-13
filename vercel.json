@@ -3,21 +3,8 @@
 	"builds": [
 		{
 			"src": "src/index.ts",
-			"use": "@vercel/node",
+			"use": "@now/node",
 			"config": { "includeFiles": ["src/**", "views/**", "public/**"] }
-		},
-		{
-			"src": "src/schemas/**",
-			"use": "@vercel/node",
-			"config": { "includeFiles": ["src/schemas/**"] }
-		},
-		{
-			"src": "public/**",
-			"use": "@now/static"
-		},
-		{
-			"src": "views/**",
-			"use": "@now/static"
 		}
 	],
 	"routes": [
