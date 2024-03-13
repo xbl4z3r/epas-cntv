@@ -2,14 +2,8 @@
 	"version": 2,
 	"builds": [
 		{
-			"src": "dist/index.js",
-			"use": "@vercel/node",
-			"config": { "includeFiles": ["dist/**"] }
-		},
-		{
-			"src": "dist/schemas/**",
-			"use": "@vercel/node",
-			"config": { "includeFiles": ["dist/schemas/**"] }
+			"src": "src/server.ts",
+			"use": "@vercel/node"
 		},
 		{
 			"src": "public/**",
@@ -23,7 +17,7 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "dist/index.js"
+			"dest": "/src/server.ts"
 		}
 	]
 }
