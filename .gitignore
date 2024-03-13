@@ -90,7 +90,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -132,3 +131,6 @@ dist
 
 .idea/
 package-lock.json
+
+dist/index.js
+dist/schemas/

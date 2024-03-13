@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Alegeri</title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Alegeri.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ambasadori CNTV",
+            "logo": "/images/logo-cntv-xxsmall.png"
+        }</script>
+    <meta name="theme-color" content="#0a5794">
+    <meta property="og:title" content="Alegeri">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+<header class="u-box-shadow u-clearfix u-header u-header" id="sec-a7be">
+    <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <a href="https://epas-cntv.vercel.app" class="u-image u-logo u-image-1" data-image-width="236"
+           data-image-height="236" title="EPAS CNTV">
+            <img src="/images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
+             data-responsive-from="MD" data-position="">
+            <div class="menu-collapse u-custom-font u-font-roboto"
+                 style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
+                <a class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-effect-duration u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-1-dark-1"
+                   href="#" style="padding: 15px 12px; font-size: calc(1em + 30px);">
+                    <svg class="u-svg-link" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+                    </svg>
+                    <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <rect y="1" width="16" height="2"></rect>
+                            <rect y="7" width="16" height="2"></rect>
+                            <rect y="13" width="16" height="2"></rect>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="u-custom-menu u-nav-container">
+                <ul class="u-custom-font u-font-roboto u-nav u-spacing-20 u-unstyled u-nav-1">
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="/" style="padding: 10px 4px;">Acasa</a>
+                    </li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="/despre" style="padding: 10px 4px;">Despre Noi</a>
+                        <div class="u-nav-popup">
+                            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                                <li class="u-nav-item"><a
+                                            class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
+                                            href="/despre">Proiecte</a>
+                                </li>
+                                <li class="u-nav-item"><a
+                                            class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
+                                            href="/despre">Echipa</a>
+                                </li>
+                                <li class="u-nav-item"><a
+                                            class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
+                                            href="/despre">Social Media</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="/blog" style="padding: 10px 4px;">Blog</a>
+                    </li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="/alegeri" style="padding: 10px 4px;">Alegeri Europarlamentare</a>
+                    </li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="/educatie" style="padding: 10px 4px;">Educatie</a>
+                    </li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
+                                href="https://cntv-edu.ro" target="_blank" style="padding: 10px 4px;">CNTV</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="u-custom-menu u-nav-container-collapse">
+                <div class="u-container-style u-inner-container-layout u-palette-1-dark-1 u-sidenav">
+                    <div class="u-inner-container-layout u-sidenav-overflow">
+                        <div class="u-menu-close"></div>
+                        <ul class="u-align-center u-nav u-popupmenu-items u-spacing-10 u-unstyled u-nav-3">
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/">Acasa</a>
+                            </li>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Despre Noi</a>
+                                <div class="u-nav-popup">
+                                    <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Proiecte</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Echipa</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Social
+                                                Media</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/blog">Blog</a>
+                            </li>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/alegeri">Alegeri
+                                    Europarlamentare</a>
+                            </li>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/educatie">Educatie</a>
+                            </li>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://cntv-edu.ro"
+                                                      target="_blank">CNTV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+<section class="u-clearfix u-palette-1-base u-section-1" id="carousel_2fc3">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-align-center u-container-style u-expanded-width-xs u-group u-radius-50 u-shape-round u-white u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+                <h2 class="u-text u-text-default u-text-palette-1-base u-text-1"> ALEGERI EUROPENE</h2>
+                <p class="u-text u-text-2"> În România, alegerile europene au loc în data de 9 iunie 2024. Cetățenii cu
+                    vârsta de cel puțin 18 ani, împliniți până în ziua alegerilor inclusiv, au dreptul de a vota.</p>
+                <div class="u-countdown u-hover-feature u-countdown-1" data-timer-id="9410" data-type="to-date"
+                     data-target-date="Sun, 09 Jun 2024 05:23:05 GMT" data-for="everyone" data-direction="down"
+                     data-after-count="none" data-count-animation="slide" data-time-left="750m" data-target-number="100"
+                     data-start-time="Tue Feb 27 2024 20:36:05 GMT+0200 (GTB Standard Time)" data-frequency="1s"
+                     data-redirect-url="https://">
+                    <div class="u-countdown-wrapper u-spacing-20">
+                        <div class="u-countdown-item u-countdown-years u-hidden u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-1">
+                                <div class="u-countdown-number u-text-palette-1-base">0</div>
+                                <div class="u-countdown-number u-hidden u-text-palette-1-base">0</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-1">Years</div>
+                        </div>
+                        <div class="u-countdown-separator u-hidden u-text-palette-1-base u-countdown-separator-1">:
+                        </div>
+                        <div class="u-countdown-days u-countdown-item u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-2">
+                                <div class="u-countdown-number u-text-palette-1-base">1</div>
+                                <div class="u-countdown-number u-text-palette-1-base">0</div>
+                                <div class="u-countdown-number u-text-palette-1-base">2</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-2">Zile</div>
+                        </div>
+                        <div class="u-countdown-separator u-text-palette-1-base u-countdown-separator-2">:</div>
+                        <div class="u-countdown-hours u-countdown-item u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-3">
+                                <div class="u-countdown-number u-text-palette-1-base">1</div>
+                                <div class="u-countdown-number u-text-palette-1-base">1</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-3">Ore</div>
+                        </div>
+                        <div class="u-countdown-separator u-text-palette-1-base u-countdown-separator-3">:</div>
+                        <div class="u-countdown-item u-countdown-minutes u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-4">
+                                <div class="u-countdown-number u-text-palette-1-base">2</div>
+                                <div class="u-countdown-number u-text-palette-1-base">9</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-4">Minute</div>
+                        </div>
+                        <div class="u-countdown-separator u-text-palette-1-base u-countdown-separator-4">:</div>
+                        <div class="u-countdown-item u-countdown-seconds u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-5">
+                                <div class="u-countdown-number u-text-palette-1-base">2</div>
+                                <div class="u-countdown-number u-text-palette-1-base">4</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-5">Secunde</div>
+                        </div>
+                        <div class="u-countdown-separator u-hidden u-text-palette-1-base u-countdown-separator-5">:
+                        </div>
+                        <div class="u-countdown-item u-countdown-numbers u-hidden u-spacing-10">
+                            <div class="u-countdown-counter u-countdown-counter-6">
+                                <div class="u-countdown-number u-text-palette-1-base">0</div>
+                                <div class="u-countdown-number u-text-palette-1-base">0</div>
+                            </div>
+                            <div class="u-countdown-label u-countdown-label-6">Items</div>
+                        </div>
+                    </div>
+                    <div class="u-countdown-message u-hidden">
+                        <p>Sorry, the time is up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="u-hidden-lg u-hidden-md u-hidden-sm u-hidden-xs u-image u-image-contain u-image-default u-image-1"
+             src="/images/g68e39791adde6694dc03bc7b5e7c94e337f77f0dfd144515fab10600c7f014a9639322e55f8f73e1617262ad280b8f2e_1280.png"
+             alt="" data-image-width="1280" data-image-height="1271">
+    </div>
+
+</section>
+<section class="u-align-center u-clearfix u-white u-section-2" id="carousel_0d10">
+    <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
+        <h2 class="u-text u-text-1"> Cum votezi în România</h2>
+        <div class="u-accordion u-spacing-2 u-accordion-1">
+            <div class="u-accordion-item">
+                <a class="active u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-1"
+                   id="link-accordion-ef97" aria-controls="accordion-ef97" aria-selected="true">
+                    <span class="u-accordion-link-text"> Când au loc alegerile europene?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-1"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-badd"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-badd"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1"
+                     id="accordion-ef97" aria-labelledby="link-accordion-ef97">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                        <p class="u-text u-text-default u-text-2"> În România, alegerile europene au loc duminică, 9
+                            iunie 2024. Secțiile de votare sunt deschise în intervalul orar 7.00-21.00, ora locală.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-2"
+                   id="link-accordion-60fa" aria-controls="accordion-60fa" aria-selected="false">
+              <span class="u-accordion-link-text"> Câți deputați sunt aleși?<br>
+              </span><span class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-2"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3258"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-3258"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-2" id="accordion-60fa"
+                     aria-labelledby="link-accordion-60fa">
+                    <div class="u-container-layout u-container-layout-2">
+                        <p class="u-text u-text-default u-text-3"> În 2024, votanții vor alege 33 de membri ai
+                            Parlam​​entului European.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-3"
+                   id="link-accordion-1582" aria-controls="accordion-1582" aria-selected="false">
+              <span class="u-accordion-link-text"> Cum sunt aleși deputații?<br>
+              </span><span class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-3"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b2ea"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-b2ea"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-3" id="accordion-1582"
+                     aria-labelledby="link-accordion-1582">
+                    <div class="u-container-layout u-container-layout-3">
+                        <p class="u-text u-text-default u-text-4"> Conform legislației europene, toate țările trebuie să
+                            utilizeze un sistem de vot care să asigure o reprezentare proporțională, ceea ce înseamnă că
+                            numărul de deputați aleși de la fiecare partid politic depinde de numărul de voturi obținut
+                            de partid. România folosește un sistem de liste închise, care nu permite modificarea
+                            numărului de ordine al candidaților pe listă. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-4"
+                   id="link-accordion-16ba" aria-controls="accordion-16ba" aria-selected="false">
+              <span class="u-accordion-link-text"> Cine sunt candidații?<br>
+              </span><span class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-4"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f3d8"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f3d8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-4" id="accordion-16ba"
+                     aria-labelledby="link-accordion-16ba">
+                    <div class="u-container-layout u-container-layout-4">
+                        <p class="u-text u-text-5"> Au dreptul de a fi aleși ca membri din România în Parlamentul
+                            European persoanele care au împlinit vârsta de 23 de ani, au drept de vot și figurează pe
+                            listele unui partid politic, ale unei organizaţii a cetăţenilor aparţinînd minorităţilor
+                            naţionale, unei alianţe politice, alianţe electorale ori ca independent. Lista completă a
+                            candidaților este publicată pe pagina Biroului Electoral Central (constituit cu aproximativ
+                            3 luni înainte de data alegerilor europene).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-5"
+                   id="link-ba62" aria-controls="ba62" aria-selected="false">
+                    <span class="u-accordion-link-text"> Pentru ce partide politice pot vota?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-5"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0962"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-0962"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-5" id="ba62"
+                     aria-labelledby="link-ba62">
+                    <div class="u-container-layout u-container-layout-5">
+                        <p class="u-text u-text-default u-text-6"> Partidele politice ori candidații independenți care
+                            vor să candideze la alegerile pentru Parlamentul European trebuie să se înregistreze la
+                            autoritatea națională electorală cu cel puțin 60 de zile înainte de data alegerilor. Lista
+                            completă a candidaților este publicată pe pagina Biroului Electoral Central (constituit cu
+                            aproximativ 3 luni înainte de data alegerilor europene).<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-6"
+                   id="link-645e" aria-controls="645e" aria-selected="false">
+                    <span class="u-accordion-link-text"> Care este pragul electoral pentru partidele politice?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-6"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-edee"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-edee"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-6" id="645e"
+                     aria-labelledby="link-645e">
+                    <div class="u-container-layout u-container-layout-6">
+                        <p class="u-text u-text-default u-text-7"> Pentru partidele politice, organizaţiile cetăţenilor
+                            aparţinând minorităţilor naţionale, alianţele politice şi alianţele electorale, pragul
+                            electoral reprezintă 5% din totalul voturilor valabil exprimate la nivel naţional.<br>Candidaţilor
+                            independenţi li se pot atribui mandate dacă au obţinut, fiecare în parte, un număr de voturi
+                            valabil exprimate cel puţin egal cu coeficientul electoral naţional. Coeficientul electoral
+                            naţional reprezintă partea întreagă a raportului dintre numărul total de voturi valabil
+                            exprimate şi numărul de mandate de parlamentari europeni ce revin României.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-7"
+                   id="link-8505" aria-controls="8505" aria-selected="false">
+                    <span class="u-accordion-link-text"> Câte și care sunt circumscripțiile electorale?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-7"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e4ba"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e4ba"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-7" id="8505"
+                     aria-labelledby="link-8505">
+                    <div class="u-container-layout u-container-layout-7">
+                        <p class="u-text u-text-default u-text-8"> Întreg teritoriul României constituie o singură
+                            circumscripție electorală, ceea ce înseamnă că alegătorii aleg dintre aceleași liste de
+                            candidați.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-8"
+                   id="link-2322" aria-controls="2322" aria-selected="false">
+                    <span class="u-accordion-link-text"> Am obligația legală de a vota?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-8"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c525"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c525"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-8" id="2322"
+                     aria-labelledby="link-2322">
+                    <div class="u-container-layout u-container-layout-8">
+                        <p class="u-text u-text-default u-text-9"> Nu, nu există obligația legală de a vota la alegerile
+                            europene în România.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-9"
+                   id="link-e6a5" aria-controls="e6a5" aria-selected="false">
+                    <span class="u-accordion-link-text"> Cine poate vota?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-9"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a146"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-a146"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-9" id="e6a5"
+                     aria-labelledby="link-e6a5">
+                    <div class="u-container-layout u-container-layout-9">
+                        <p class="u-text u-text-default u-text-10"> În România, poți vota la alegerile europene
+                            dacă:<br>• ai cel puțin 18 ani, împliniți până în ziua alegerilor inclusiv;<br>• ești
+                            cetățean român sau cetățean UE, cu domiciliul sau rezidența pe teritoriul României, în
+                            conformitate cu procedura administrativă aplicabilă.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-10"
+                   id="link-2330" aria-controls="2330" aria-selected="false">
+                    <span class="u-accordion-link-text"> Unde pot vota?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-10"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bfdc"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-bfdc"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-10" id="2330"
+                     aria-labelledby="link-2330">
+                    <div class="u-container-layout u-container-layout-10">
+                        <p class="u-text u-text-default u-text-11">
+                            <span style="font-weight: 700;">Cetățean român care votează în România</span>
+                            <br>Alegătorii sunt arondați unei secții de votare, în funcție de domiciliu sau reședință.
+                            Listele de alegători sunt întocmite în avans. Totuși, dacă te afli într-o altă localitate
+                            decât cea de domiciliu/reședință în ziua respectivă, poți vota și la altă secție de votare,
+                            caz în care președintele biroului electoral al secției de votare te va înregistra pe listele
+                            suplimentare de alegători.<br>
+                            <span style="font-weight: 700;">Cetățean UE care votează în România</span>
+                            <br>Poți vota dacă ești cetățean al unui alt stat membru al UE, dar trebuie să te înscrii
+                            mai întâi pe o listă electorală specială la primăria localității de domiciliu sau de
+                            reședință. Poți vota la secția de care aparții în funcție de locul de domiciliu/reședință.
+                            Există posibilitatea să votezi și la o altă secție, dar numai dacă biroul electoral județean
+                            sau biroul electoral de sector (în cazul Bucureștiului) confirmă că ai fost inclus(ă) pe
+                            listele electorale speciale la cererea telefonică a președintelui biroului electoral al
+                            secției de votare.<br>
+                            <span style="font-weight: 700;">Cetățean român care votează în străinătate</span>
+                            <br>Poți vota dintr-un alt stat membru al UE sau dintr-o țară din afara UE la secțiile de
+                            votare organizate de către statul român. Nu sunt necesare proceduri suplimentare pentru
+                            înregistrarea la vot dintr-un alt stat membru al UE sau dintr-o țară din afara UE.<br>Pentru
+                            informații suplimentare, poți consulta pagina&nbsp;<a target="_blank"
+                                                                                  rel="noreferrer noopener nofollow"
+                                                                                  href="https://www.mae.ro/"
+                                                                                  class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Ministerului
+                                Afacerilor Externe</a>.<br>
+                            <span style="font-weight: 700;">Cetățean UE care votează în străinătate</span>
+                            <br>Poți vota dacă ești cetățean al unui alt stat membru al UE la o secție de votare
+                            organizată de statul român în alt stat decât România doar dacă figurezi înscris în listele
+                            electorale speciale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-11"
+                   id="link-0de3" aria-controls="0de3" aria-selected="false">
+                    <span class="u-accordion-link-text"> Unde mă înscriu pe listele de alegători?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-11"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-290c"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-290c"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-11" id="0de3"
+                     aria-labelledby="link-0de3">
+                    <div class="u-container-layout u-container-layout-11">
+                        <p class="u-text u-text-default u-text-12">
+                            <span style="font-weight: 700;"> Cetățean român care votează în România</span>
+                            <br>Dacă ești cetățean român, nu este nevoie de pre-înscriere pe listele electorale, acestea
+                            sunt întocmite în avans de către autorități. Totuși, dacă ți-ai schimbat recent domiciliul
+                            sau reședința, îți recomandăm să verifici dacă ești înscris(ă) corect pe listele electorale
+                            la adresa:&nbsp;<a target="_blank" rel="noreferrer noopener nofollow"
+                                               href="https://www.registrulelectoral.ro/"
+                                               class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Registrul
+                                electoral</a>.<br>
+                            <span style="font-weight: 700;">Cetățean UE care votează în România</span>
+                            <br>Trebuie să te înscrii mai întâi pe o listă electorală specială la primăria localității
+                            de domiciliu sau de reședință. Poți vota la secția de care aparții în funcție de locul de
+                            domiciliu/reședință. Există posibilitatea să votezi și la o altă secție, dar numai dacă
+                            biroul electoral județean sau biroul electoral de sector (în cazul Bucureștiului) confirmă
+                            că ai fost inclus(ă) pe listele electorale speciale la cererea telefonică a președintelui
+                            biroului electoral al secției de votare.<br>
+                            <span style="font-weight: 700;">Cetățean român care votează din străinătate</span>
+                            <br>Nu sunt necesare proceduri suplimentare pentru înregistrarea la vot dintr-un alt stat
+                            membru al UE sau dintr-o țară din afara UE.<br>Pentru informații suplimentare, poți consulta
+                            pagina&nbsp;<a target="_blank" rel="noreferrer noopener nofollow" href="https://www.mae.ro/"
+                                           class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3">Ministerului
+                                Afacerilor Externe</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-12"
+                   id="link-de10" aria-controls="de10" aria-selected="false">
+                    <span class="u-accordion-link-text"> Care este termenul-limită de înscriere la vot?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-12"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-27dd"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-27dd"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-12" id="de10"
+                     aria-labelledby="link-de10">
+                    <div class="u-container-layout u-container-layout-12">
+                        <p class="u-text u-text-default u-text-13">
+                            <span style="font-weight: 700;"> Cetățean român care votează în România</span>
+                            <br>Dacă ești cetățean român, nu este nevoie de pre-înscriere pe listele electorale, acestea
+                            sunt întocmite în avans de către autorități. Totuși, dacă ți-ai schimbat recent
+                            domiciliul/reședința, îți recomandăm să verifici dacă ești înscris(ă) corect pe listele
+                            electorale la adresa:&nbsp;<a target="_blank" rel="noreferrer noopener nofollow"
+                                                          href="https://www.registrulelectoral.ro/"
+                                                          class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4">Registrul
+                                electoral</a>.<br>
+                            <span style="font-weight: 700;">Cetățean UE care votează în România</span>
+                            <br>Cel mai târziu cu 60 de zile înaintea datei votării, trebuie să te înscrii pe o listă
+                            electorală specială la primăria localității de domiciliu sau de reședință.<br>
+                            <span style="font-weight: 700;">Cetățean român care votează din străinătate</span>
+                            <br>Nu sunt necesare proceduri suplimentare pentru înregistrarea la vot dintr-un alt stat
+                            membru al UE sau dintr-o țară din afara UE.<br>Pentru informații suplimentare, poți consulta
+                            pagina&nbsp;<a target="_blank" rel="noreferrer noopener nofollow" href="https://www.mae.ro/"
+                                           class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5">Ministerului
+                                Afacerilor Externe</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-13"
+                   id="link-5916" aria-controls="5916" aria-selected="false">
+                    <span class="u-accordion-link-text"> De ce documente am nevoie pentru a putea vota?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-13"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b96f"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-b96f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-13" id="5916"
+                     aria-labelledby="link-5916">
+                    <div class="u-container-layout u-container-layout-13">
+                        <p class="u-text u-text-default u-text-14"> Ai nevoie de o carte de identitate valabilă sau de
+                            un pașaport valabil.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-14"
+                   id="link-0921" aria-controls="0921" aria-selected="false">
+                    <span class="u-accordion-link-text"> De ce sprijin pot beneficia ca alegător cu dizabilități?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-14"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2ba7"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2ba7"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-14" id="0921"
+                     aria-labelledby="link-0921">
+                    <div class="u-container-layout u-container-layout-14">
+                        <p class="u-text u-text-default u-text-15"> În România, persoanele cu dizabilități pot beneficia
+                            de asistență pentru a vota în cadrul secției de votare sau pot opta pentru votul prin
+                            intermediul urnei speciale.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-15"
+                   id="link-9f83" aria-controls="9f83" aria-selected="false">
+                    <span class="u-accordion-link-text"> Pot vota prin corespondență?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-15"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-18b8"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-18b8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-15" id="9f83"
+                     aria-labelledby="link-9f83">
+                    <div class="u-container-layout u-container-layout-15">
+                        <p class="u-text u-text-default u-text-16"> Nu, votul prin corespondență la alegerile europene
+                            nu este posibil în România.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-16"
+                   id="link-0e60" aria-controls="0e60" aria-selected="false">
+                    <span class="u-accordion-link-text"> Pot vota online?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-16"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-649c"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-649c"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-16" id="0e60"
+                     aria-labelledby="link-0e60">
+                    <div class="u-container-layout u-container-layout-16">
+                        <p class="u-text u-text-default u-text-17"> Nu, votul online la alegerile europene nu este
+                            posibil în România.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-accordion-item">
+                <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-button-style u-hover-palette-1-base u-text-active-white u-text-hover-white u-white u-accordion-link-17"
+                   id="link-7152" aria-controls="7152" aria-selected="false">
+                    <span class="u-accordion-link-text"> Pot vota prin împuternicire?</span><span
+                            class="u-accordion-link-icon u-icon u-icon-circle u-text-palette-3-base u-icon-17"><svg
+                                class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-27a2"></use></svg><svg
+                                class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-27a2"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                </a>
+                <div class="u-accordion-pane u-container-style u-accordion-pane-17" id="7152"
+                     aria-labelledby="link-7152">
+                    <div class="u-container-layout u-container-layout-17">
+                        <p class="u-text u-text-default u-text-18"> Nu, votul prin împuternicire nu este posibil în
+                            România.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="u-align-center u-clearfix u-footer u-palette-1-dark-1 u-footer" id="sec-b1d3">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+             src="/images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
+        <p class="u-align-left u-small-text u-text u-text-variant u-text-1"> © Colegiul Național „Tudor Vladimirescu”
+            Târgu Jiu<br>„Performanța este Tradiția noastră! Din 1890.”<br>Dezvoltat de <a
+                    href="https://github.com/xbl4z3r"
+                    class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-light-1 u-btn-1">Petroniu
+                Christian</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
