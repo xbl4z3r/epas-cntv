@@ -7,6 +7,11 @@
 			"config": { "includeFiles": ["src/**"] }
 		},
 		{
+			"src": "src/schemas/**",
+			"use": "@vercel/node",
+			"config": { "includeFiles": ["src/schemas/**"] }
+		},
+		{
 			"src": "public/**",
 			"use": "@now/static"
 		},

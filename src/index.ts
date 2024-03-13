@@ -19,9 +19,9 @@ mongoose.connect(process.env.DATABASE_URI).then(r => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
-app.set("views", join(__dirname, "views"));
+app.set("views", join(__dirname, "views").replace("src", "dist").replace("dist", ''));
 
-app.use(express.static(join(__dirname, "public")));
+app.use(express.static(join(__dirname, "public").replace("src", "dist").replace("dist", '')));
 
 app.get('/', (req, res) => {
     res.render('home');
