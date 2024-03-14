@@ -124,4 +124,13 @@ router.post('/trivia/:id', async (req, res) => {
     }
 });
 
+// Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours
+setInterval(() => {
+    console.log('Deleting old trivia sessions...')
+    const sixHoursAgo = new Date(new Date().getTime() - 6 * 60 * 60 * 1000);
+    TriviaSession.deleteMany({startedAt: {$lt: sixHoursAgo}}).then(r => {
+        console.log('Deleted ' + r.deletedCount + ' sessions!');
+    });
+}, 6 * 60 * 60 * 1000);
+
 export default router;

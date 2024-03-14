@@ -9,9 +9,9 @@ dotenv.config();
 
 // @ts-ignore
 mongoose.connect(process.env.DATABASE_URI).then(r => {
-    console.log('Connected to mongodb');
+    console.log('Successfully connected to the database!');
 }).catch(e => {
-    console.log('Error connecting to mongodb');
+    console.log('Error connecting to the database!');
     console.log(e);
 });
 
@@ -30,5 +30,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Server started on http://localhost:3000');
+    console.log('Server started on port 3000');
 });
