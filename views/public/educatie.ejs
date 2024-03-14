@@ -3,24 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>EPAS CNTV | <%= post.title %></title>
-    <link rel="stylesheet" href="/../nicepage.css" media="screen">
-    <link rel="stylesheet" href="/../Post-Template.css" media="screen">
-    <script class="u-script" type="text/javascript" src="/../jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="/../nicepage.js" defer=""></script>
+    <title>CNTV EPAS | Educatie</title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Educatie.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+          href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
 
 
     <script type="application/ld+json">{
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Ambasadori CNTV",
-        "logo": "/images/logo-cntv-xxsmall.png"
-    }</script>
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ambasadori CNTV",
+            "logo": "images/logo-cntv-xxsmall.png"
+        }</script>
     <meta name="theme-color" content="#0a5794">
+    <meta property="og:title" content="Educatie">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
@@ -28,7 +31,7 @@
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <a href="https://epas-cntv.vercel.app" class="u-image u-logo u-image-1" data-image-width="236"
            data-image-height="236" title="EPAS CNTV">
-            <img src="/../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
+            <img src="/images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
              data-responsive-from="MD" data-position="">
@@ -105,10 +108,11 @@
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#team">Echipa</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#projects">Proiecte</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#projects">Proiecte</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#social">Social
-                                                Media</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#social">Social Media</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -131,31 +135,97 @@
         </nav>
     </div>
 </header>
-<section class="u-align-center u-clearfix u-section-1" id="sec-e113">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
-            <div class="u-container-layout u-valign-top u-container-layout-1">
-                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                     src="<%= `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}` %>">
-                <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                    <span class="u-meta-author u-meta-icon"><%= post.author %></span>
-                    <span class="u-meta-date u-meta-icon"><%= new Date(post.date).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' }) %></span>
-                    <span class="u-meta-category u-meta-icon"><%= post.tags.join(', ') %></span>
-                </div>
-                <h2 class="u-align-center u-blog-control u-text u-text-1"><%= post.title %></h2>
-                <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view">
-                    <%= post.content %>
+<section class="skrollable u-clearfix u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-white u-section-1"
+         id="carousel_cc79">
+    <img class="u-expanded-height-xl u-image u-image-1" src="/images/weee.jpg" data-image-width="1152"
+         data-image-height="1080">
+    <div class="u-align-left u-container-style u-group u-opacity u-opacity-60 u-shape-rectangle u-white u-group-1">
+        <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h2 class="u-text u-text-1">Educatie </h2>
+            <p class="u-text u-text-2"> Vă oferim o gamă de resurse educative menite să vă ajute să înțelegeți mai bine
+                Uniunea Europeană și procesele sale decizionale.<br>
+                <br>Indiferent dacă sunteți un începător în domeniul politicii europene sau un cunoscător experimentat,
+                suntem convinși că veți găsi aceste resurse educative valoroase și utile. Vă încurajăm să explorați
+                această secțiune în profunzime și să vă bucurați de procesul de învățare și descoperire a fascinantului
+                univers al Uniunii Europene.<br>
+            </p>
+            <a href="/educatie#trivia"
+               class="u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-montserrat u-hover-feature u-palette-1-base u-radius u-btn-1">Trivia</a>
+            <a href="/educatie#flashcards"
+               class="u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-montserrat u-hover-feature u-palette-1-base u-radius u-btn-2">Flashcard-uri</a>
+        </div>
+    </div>
+
+
+</section>
+<section class="u-clearfix u-palette-1-dark-1 u-section-2" id="trivia">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <div class="u-clearfix u-expanded-width u-group-elements u-group-elements-1">
+                                <h1 class="u-align-left u-text u-text-default u-text-1">Trivia</h1>
+                                <p class="u-align-left u-text u-text-2">In secțiunea de trivia veți găsi o serie de
+                                    întrebări legate de Uniunea Europeană. Acestea vă vor testa cunoștințele și vă vor
+                                    oferi ocazia să descoperiți informații interesante și mai puțin cunoscute despre
+                                    UE.</p>
+                                <a href="/trivia?action=start"
+                                   class="u-align-left u-border-0 u-btn u-btn-round u-button-style u-custom-font u-font-montserrat u-hover-feature u-palette-3-base u-radius u-btn-1">Start</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+                                 src="/images/istockphoto-1433122206-612x612-removebg-preview.png" alt=""
+                                 data-image-width="500" data-image-height="500">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+</section>
+<section class="u-clearfix u-white u-section-3" id="flashcards">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <div class="u-clearfix u-expanded-width u-group-elements u-group-elements-1">
+                                <h1 class="u-align-left u-text u-text-default u-text-1">Flashcard-uri</h1>
+                                <p class="u-align-left u-text u-text-2"> Flashcard-urile educative vă vor oferi o
+                                    modalitate interactivă și eficientă de a învăța despre diverse aspecte ale Uniunii
+                                    Europene, inclusiv instituțiile sale, statele membre, simbolurile și valori
+                                    importante. Utilizând aceste flashcarduri, veți putea să vă consolidați cunoștințele
+                                    într-un mod distractiv și interactiv.</p>
+                                <a href="/flashcards?action=start"
+                                   class="u-align-left u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-montserrat u-hover-feature u-palette-1-dark-1 u-radius u-btn-1">Start</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+                                 src="/images/3813681.png" alt="" data-image-width="512" data-image-height="512">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 
 <footer class="u-align-center u-clearfix u-footer u-palette-1-dark-1 u-footer" id="sec-b1d3">
     <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-             src="/../images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
+             src="/images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
         <p class="u-align-left u-small-text u-text u-text-variant u-text-1"> © Colegiul Național „Tudor Vladimirescu”
             Târgu Jiu<br>„Performanța este Tradiția noastră! Din 1890.”<br>Dezvoltat de <a
                     href="https://github.com/xbl4z3r"

@@ -15,15 +15,15 @@ mongoose.connect(process.env.DATABASE_URI).then(r => {
     console.log(e);
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set("views", join(__dirname, "views").replace("src", "dist").replace("dist/", '').replace("dist\\", ''));
 
 app.use(express.static(join(__dirname, "static").replace("src", "dist").replace("dist/", '').replace("dist\\", '')));
 
-app.use('/admin', require('./routers/admin').default);
-app.use('/', require('./routers/public').default);
+app.use('/admin', require('./router/admin').default);
+app.use('/', require('./router/public').default);
 
 app.get('*', (req, res) => {
     res.render('notfound');

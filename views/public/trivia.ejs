@@ -3,24 +3,43 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>EPAS CNTV | <%= post.title %></title>
-    <link rel="stylesheet" href="/../nicepage.css" media="screen">
-    <link rel="stylesheet" href="/../Post-Template.css" media="screen">
-    <script class="u-script" type="text/javascript" src="/../jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="/../nicepage.js" defer=""></script>
+    <title>EPAS CNTV | Intrebare Trivia #<%= session.progress + 1 %></title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Trivia-Question.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
-
-
+    <script>
+        const submitAnswer = (answerId) => {
+            fetch(`/trivia/<%= session._id %>`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({answer: answerId})
+            }).then(response => response.json()).then(data => {
+                const answerButtons = document.querySelectorAll('.u-group-1');
+                if (!data.success) answerButtons[answerId].style.backgroundColor = 'red';
+                answerButtons[data.correctAnswerIndex].style.backgroundColor = 'green';
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2500);
+            })
+        }
+    </script>
     <script type="application/ld+json">{
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Ambasadori CNTV",
-        "logo": "/images/logo-cntv-xxsmall.png"
-    }</script>
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ambasadori CNTV",
+            "logo": "/images/logo-cntv-xxsmall.png"
+        }</script>
     <meta name="theme-color" content="#0a5794">
+    <meta property="og:title" content="Trivia Question">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
@@ -28,7 +47,7 @@
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <a href="https://epas-cntv.vercel.app" class="u-image u-logo u-image-1" data-image-width="236"
            data-image-height="236" title="EPAS CNTV">
-            <img src="/../images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
+            <img src="/images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
              data-responsive-from="MD" data-position="">
@@ -105,10 +124,11 @@
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#team">Echipa</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#projects">Proiecte</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#projects">Proiecte</a>
                                         </li>
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#social">Social
-                                                Media</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#social">Social Media</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -131,21 +151,29 @@
         </nav>
     </div>
 </header>
-<section class="u-align-center u-clearfix u-section-1" id="sec-e113">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
-            <div class="u-container-layout u-valign-top u-container-layout-1">
-                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                     src="<%= `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}` %>">
-                <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                    <span class="u-meta-author u-meta-icon"><%= post.author %></span>
-                    <span class="u-meta-date u-meta-icon"><%= new Date(post.date).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' }) %></span>
-                    <span class="u-meta-category u-meta-icon"><%= post.tags.join(', ') %></span>
-                </div>
-                <h2 class="u-align-center u-blog-control u-text u-text-1"><%= post.title %></h2>
-                <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view">
-                    <%= post.content %>
-                </div>
+<section class="u-align-center u-clearfix u-white u-section-1" id="sec-5ef2">
+    <div class="u-clearfix u-sheet u-valign-middle-xl u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-title u-text-1">Trivia <%= session.progress + 1 %>
+            /<%= session.questions.length %></h1>
+        <p class="u-align-center u-large-text u-text u-text-variant u-text-2"> <%= session.questions[session.progress].question %></p>
+        <div class="custom-expanded u-expanded-width-xl u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <%
+                for (let i = 0; i < session.questions[session.progress].answers.length; i++) {
+                %>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <div class="u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-hover-feature u-palette-1-base u-radius u-shape-round u-group-1"
+                                 onclick="submitAnswer(<%= i %>)" style="cursor: pointer">
+                                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                    <h3 class="u-align-center u-text u-text-default u-text-3"><%= session.questions[session.progress].answers[i] %></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <%
+                }
+                %>
             </div>
         </div>
     </div>
@@ -155,7 +183,7 @@
 <footer class="u-align-center u-clearfix u-footer u-palette-1-dark-1 u-footer" id="sec-b1d3">
     <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-             src="/../images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
+             src="/images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
         <p class="u-align-left u-small-text u-text u-text-variant u-text-1"> © Colegiul Național „Tudor Vladimirescu”
             Târgu Jiu<br>„Performanța este Tradiția noastră! Din 1890.”<br>Dezvoltat de <a
                     href="https://github.com/xbl4z3r"

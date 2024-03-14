@@ -5,7 +5,6 @@ const ProjectSchema = new Schema({
     title: String,
     content: String,
     date: Date,
-    tags: [String],
     thumbnail: ImageSchema
 });
 

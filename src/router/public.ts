@@ -1,0 +1,127 @@
+import {Router} from "express";
+import BlogPostSchema from "../schemas/blog_post";
+import TeamMemberSchema from "../schemas/team_member";
+import ProjectSchema from "../schemas/project";
+import {TriviaQuestion, TriviaSession} from "../schemas/trivia";
+
+const router = Router();
+
+router.get('/', (req, res) => {
+    res.render('public/home');
+});
+
+router.get('/alegeri', (req, res) => {
+    res.render('public/alegeri');
+});
+
+router.get('/educatie', (req, res) => {
+    res.render('public/educatie');
+});
+
+router.get('/despre', async (req, res) => {
+    const team_members = await TeamMemberSchema.find();
+    const projects = await ProjectSchema.find();
+    res.render('public/despre', {team_members, projects});
+});
+
+router.get('/blog', async (req, res) => {
+    const posts = await BlogPostSchema.find();
+    posts.sort((a, b) => {
+        if (a == null || b == null || a.date == null || b.date == null) return 0;
+        if (a.date > b.date) return -1;
+        if (a.date < b.date) return 1;
+        return 0;
+    });
+    res.render('public/blog', {posts});
+});
+
+router.get('/blog/:id', async (req, res) => {
+    try {
+        const post = await BlogPostSchema.findById(req.params.id);
+        if (post) res.render('public/post', {post});
+        else res.render('notfound');
+    } catch (e) {
+        res.render('notfound');
+    }
+});
+
+router.get('/proiect/:id', async (req, res) => {
+    try {
+        const project = await ProjectSchema.findById(req.params.id);
+        if (project) res.render('public/project', {project});
+        else res.render('notfound');
+    } catch (e) {
+        res.render('notfound');
+    }
+});
+
+router.get('/trivia', async (req, res) => {
+    const action = req.query.action;
+    if (action && action === 'start') {
+        const questions = await TriviaQuestion.find();
+        for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+        }
+        for (let i = 0; i < questions.length; i++) {
+            const correctAnswer = questions[i].answers[questions[i].correctAnswerIndex || 0];
+            const answers = questions[i].answers;
+            for (let j = answers.length - 1; j > 0; j--) {
+                const k = Math.floor(Math.random() * (j + 1));
+                [answers[j], answers[k]] = [answers[k], answers[j]];
+            }
+            questions[i].answers = answers;
+            questions[i].correctAnswerIndex = answers.indexOf(correctAnswer);
+        }
+        const session = new TriviaSession({questions, startedAt: new Date(), score: 0, progress: 0});
+        await session.save();
+        return res.redirect('/trivia/' + session._id);
+    } else {
+        res.render('notfound');
+    }
+});
+
+router.get('/trivia/:id', async (req, res) => {
+    try {
+        const session = await TriviaSession.findById(req.params.id);
+        if (session) {
+            if ((session.progress || 0) >= session.questions.length) {
+                res.render('public/trivia_end', {session});
+                TriviaSession.findByIdAndDelete(session._id).then(r => {
+                });
+                return;
+            }
+            res.render('public/trivia', {session});
+        } else {
+            res.render('notfound');
+        }
+    } catch (e) {
+        res.render('notfound');
+    }
+});
+
+router.post('/trivia/:id', async (req, res) => {
+    try {
+        const session = await TriviaSession.findById(req.params.id);
+        if (session) {
+            const question = session.questions[session.progress || 0];
+            const data = {
+                success: false,
+                correctAnswerIndex: question.correctAnswerIndex
+            };
+            if (question.correctAnswerIndex === req.body.answer) {
+                session.score = (session.score || 0) + 1;
+                data.success = true;
+            }
+            session.progress = (session.progress || 0) + 1;
+            await session.save();
+            res.json(data);
+        } else {
+            res.json({success: false});
+        }
+    } catch (e) {
+        res.json({success: false});
+    }
+});
+
+export default router;
