@@ -58,6 +58,8 @@ router.get('/proiect/:id', async (req, res) => {
 router.get('/trivia', async (req, res) => {
     const action = req.query.action;
     if (action && action === 'start') {
+        const username = req.query.username;
+        if (!username) return res.redirect('/educatie');
         const questions = await TriviaQuestion.find();
         for (let i = questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -73,7 +75,7 @@ router.get('/trivia', async (req, res) => {
             questions[i].answers = answers;
             questions[i].correctAnswerIndex = answers.indexOf(correctAnswer);
         }
-        const session = new TriviaSession({questions, startedAt: new Date(), score: 0, progress: 0});
+        const session = new TriviaSession({questions, name: username, startedAt: new Date(), score: 0, progress: 0});
         await session.save();
         return res.redirect('/trivia/' + session._id);
     } else {
