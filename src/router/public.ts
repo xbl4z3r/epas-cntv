@@ -3,6 +3,7 @@ import BlogPostSchema from "../schemas/blog_post";
 import TeamMemberSchema from "../schemas/team_member";
 import ProjectSchema from "../schemas/project";
 import {TriviaQuestion, TriviaSession} from "../schemas/trivia";
+import AwardSchema from "../schemas/award";
 
 const router = Router();
 
@@ -21,7 +22,15 @@ router.get('/educatie', (req, res) => {
 router.get('/despre', async (req, res) => {
     const team_members = await TeamMemberSchema.find();
     const projects = await ProjectSchema.find();
-    res.render('public/despre', {team_members, projects});
+    const awards = await AwardSchema.find();
+    // sort by newest first
+    awards.sort((a, b) => {
+        if (a == null || b == null || a.year == null || b.year == null) return 0;
+        if (a.year > b.year) return -1;
+        if (a.year < b.year) return 1;
+        return 0;
+    });
+    res.render('public/despre', {team_members, projects, awards});
 });
 
 router.get('/blog', async (req, res) => {

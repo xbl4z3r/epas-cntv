@@ -42624,15 +42624,18 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-nav-1 {
   font-weight: 400;
   font-size: 1rem;
-  letter-spacing: normal;
 }
 
-.u-header .u-nav-3 {
+.u-header .u-nav-4 {
   font-size: 1.25rem;
 }
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     width: auto;
+  }
+
+  .u-header .u-nav-1 {
+    letter-spacing: normal;
   }
 }
 @media (max-width: 991px) {
