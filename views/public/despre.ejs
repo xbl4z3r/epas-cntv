@@ -107,12 +107,14 @@
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3" target="_blank">Ghid CNTV
+                                            href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3"
+                                            target="_blank">Ghid CNTV
                                         pentru o Scoala Durabila</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV Scoala
+                                            href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV
+                                        Scoala
                                         Ambasador</a>
                                 </li>
                             </ul>
@@ -158,11 +160,13 @@
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3" target="_blank">Ghid
+                                                                  href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3"
+                                                                  target="_blank">Ghid
                                                 CNTV pentru o Scoala Durabila</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV
+                                                                  href="https://online.fliphtml5.com/eabye/wnrw/#p=1"
+                                                                  target="_blank">CNTV
                                                 Scoala Ambasador</a>
                                         </li>
                                     </ul>
@@ -248,48 +252,23 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <h2 class="u-align-center u-text u-text-default u-text-1">Proiecte</h2>
         <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
             <div class="u-repeater u-repeater-1">
-                <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                        <img class="u-expanded-width u-image u-image-default u-image-1" alt="" data-image-width="2836"
-                             data-image-height="1875" src="images/90fc53c9.svg" data-href="/projects/projectId">
-                        <h4 class="u-align-left u-text u-text-default u-text-2">
-                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
-                               data-href="/projects/projectId">Proiect #1 </a>
-                        </h4>
-                        <p class="u-align-left u-text u-text-default u-text-3">
-                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
-                               data-href="/projects/projectId"> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit...</a>
-                        </p>
+                <%
+                projects.forEach(project => {
+                %>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <div class="custom-expanded u-container-style u-group u-palette-1-light-3 u-radius u-shape-round u-group-1">
+                                <div class="u-container-layout u-valign-top u-container-layout-2">
+                                    <h3 class="u-text u-text-default u-text-2"><%= project.title %></h3>
+                                    <h6 class="u-text u-text-default u-text-3"><%= project.date %></h6>
+                                    <p class="u-text u-text-4"><%= project.content %></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                        <img class="u-expanded-width u-image u-image-default u-image-2" alt="" data-image-width="2836"
-                             data-image-height="1875" src="images/90fc53c9.svg">
-                        <h4 class="u-align-left u-text u-text-default u-text-4"> Proiect #2</h4>
-                        <p class="u-align-left u-text u-text-default u-text-5"> Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit...</p>
-                    </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                        <img class="u-expanded-width u-image u-image-default u-image-3" alt="" data-image-width="2836"
-                             data-image-height="1875" src="images/90fc53c9.svg">
-                        <h4 class="u-align-left u-text u-text-default u-text-6"> Proiect #3</h4>
-                        <p class="u-align-left u-text u-text-default u-text-7"> Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit...</p>
-                    </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                        <img class="u-expanded-width u-image u-image-default u-image-4" alt="" data-image-width="2836"
-                             data-image-height="1875" src="images/90fc53c9.svg">
-                        <h4 class="u-align-left u-text u-text-default u-text-8"> Proiect #4</h4>
-                        <p class="u-align-left u-text u-text-default u-text-9"> Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit...</p>
-                    </div>
-                </div>
+                <%
+                });
+                %>
             </div>
             <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1"
                href="#" role="button">

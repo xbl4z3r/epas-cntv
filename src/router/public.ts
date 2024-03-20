@@ -4,6 +4,7 @@ import TeamMemberSchema from "../schemas/team_member";
 import ProjectSchema from "../schemas/project";
 import {TriviaQuestion, TriviaSession} from "../schemas/trivia";
 import AwardSchema from "../schemas/award";
+import {Flashcard} from "../schemas/flashcard";
 
 const router = Router();
 
@@ -30,6 +31,20 @@ router.get('/despre', async (req, res) => {
         if (a.year < b.year) return 1;
         return 0;
     });
+    const months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+    projects.sort((a, b) => {
+        if (a == null || b == null || a.date == null || b.date == null) return 0;
+        // date is in format "month numericYear"
+        const aParts = a.date.split(' ');
+        const bParts = b.date.split(' ');
+        const aMonth = months.indexOf(aParts[0]);
+        const bMonth = months.indexOf(bParts[0]);
+        if (aParts[1] > bParts[1]) return -1;
+        if (aParts[1] < bParts[1]) return 1;
+        if (aMonth > bMonth) return -1;
+        if (aMonth < bMonth) return 1;
+        return 0;
+    });
     res.render('public/despre', {team_members, projects, awards});
 });
 
@@ -48,16 +63,6 @@ router.get('/blog/:id', async (req, res) => {
     try {
         const post = await BlogPostSchema.findById(req.params.id);
         if (post) res.render('public/post', {post});
-        else res.render('notfound');
-    } catch (e) {
-        res.render('notfound');
-    }
-});
-
-router.get('/proiect/:id', async (req, res) => {
-    try {
-        const project = await ProjectSchema.findById(req.params.id);
-        if (project) res.render('public/project', {project});
         else res.render('notfound');
     } catch (e) {
         res.render('notfound');
@@ -133,6 +138,11 @@ router.post('/trivia/:id', async (req, res) => {
     } catch (e) {
         res.json({success: false});
     }
+});
+
+router.get('/flashcards', async (req, res) => {
+    const flashcards = await Flashcard.find();
+    res.render('public/flashcards', {flashcards});
 });
 
 // Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours

@@ -3,24 +3,28 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>EPAS CNTV | <%= project.title %></title>
-    <link rel="stylesheet" href="/../nicepage.css" media="screen">
-    <link rel="stylesheet" href="/../Post-Template.css" media="screen">
-    <script class="u-script" type="text/javascript" src="/../jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="/../nicepage.js" defer=""></script>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>EPAS CNTV | Flashcards</title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Flashcards.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
-
+          href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
 
     <script type="application/ld+json">{
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Ambasadori CNTV",
-            "logo": "/images/logo-cntv-xxsmall.png"
+            "logo": "images/logo-cntv-xxsmall.png"
         }</script>
     <meta name="theme-color" content="#0a5794">
+    <meta property="og:title" content="Flashcards">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
@@ -102,13 +106,13 @@
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3" target="_blank">Ghid CNTV
-                                        pentru o Scoala Durabila</a>
+                                            href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3"
+                                            target="_blank">Ghid CNTV pentru o Scoala Durabila</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV Scoala
-                                        Ambasador</a>
+                                            href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV
+                                        Scoala Ambasador</a>
                                 </li>
                             </ul>
                         </div>
@@ -153,12 +157,12 @@
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3" target="_blank">Ghid
-                                                CNTV pentru o Scoala Durabila</a>
+                                                                  href="https://online.fliphtml5.com/eabye/kvof/index.html#p=3"
+                                                                  target="_blank">Ghid CNTV pentru o Scoala Durabila</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="https://online.fliphtml5.com/eabye/wnrw/#p=1" target="_blank">CNTV
-                                                Scoala Ambasador</a>
+                                                                  href="https://online.fliphtml5.com/eabye/wnrw/#p=1"
+                                                                  target="_blank">CNTV Scoala Ambasador</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -171,35 +175,54 @@
         </nav>
     </div>
 </header>
-<section class="u-align-center u-clearfix u-section-1" id="sec-e113">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
-            <div class="u-container-layout u-valign-top u-container-layout-1">
-                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                     src="<%= `data:${post.thumbnail.contentType};base64,${post.thumbnail.data}` %>">
-                <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                    <span class="u-meta-author u-meta-icon"><%= post.author %></span>
-                    <span class="u-meta-date u-meta-icon"><%= new Date(post.date).toLocaleDateString('ro-RO', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        }) %></span>
-                    <span class="u-meta-category u-meta-icon"><%= post.tags.join(', ') %></span>
-                </div>
-                <h2 class="u-align-center u-blog-control u-text u-text-1"><%= post.title %></h2>
-                <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view">
-                    <%= post.content %>
-                </div>
+<section class="u-clearfix u-palette-1-dark-1 u-section-1" id="sec-5430">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Flashcard-u<span style="font-weight: 700;"></span>ri
+        </h1>
+        <h3 class="u-align-center u-text u-text-grey-10 u-text-2">Descopera larga noastra colectie de flashcard-uri
+            facute pentru a va ajuta sa invatati despre UE. </h3>
+    </div>
+</section>
+<section class="u-clearfix u-section-2" id="sec-8685">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <%
+                let index = 0;
+                flashcards.forEach(flashcard => {
+                %>
+                    <div class="u-container-style u-list-item u-repeater-item" style="cursor: pointer">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <div class="custom-expanded u-align-left u-container-style u-group u-hover-feature u-palette-1-base u-radius u-shape-round u-group-1">
+                                <div class="u-container-layout u-valign-middle u-container-layout-2"
+                                     onclick="const flash = document.getElementById('flash_<%= index %>');
+                                             if(flash.innerHTML === '<%= flashcard.question %>') {
+                                             flash.innerHTML = '<%= flashcard.answer %>'
+                                             flash.parentElement.classList.add('u-palette-1-light-1');
+                                             } else {
+                                             flash.innerHTML = '<%= flashcard.question %>'
+                                             flash.parentElement.classList.remove('u-palette-1-light-1');
+                                             }
+                                             ">
+                                    <h4 class="u-align-center u-text u-text-1"
+                                        id="flash_<%= index %>"><%= flashcard.question %></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <%
+                    index++;
+                });
+                %>
             </div>
         </div>
     </div>
 </section>
 
-
 <footer class="u-align-center u-clearfix u-footer u-palette-1-dark-1 u-footer" id="sec-b1d3">
     <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-             src="/../images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
+             src="/images/logo-cntv-xxsmall.png" alt="" data-image-width="236" data-image-height="236">
         <p class="u-align-left u-small-text u-text u-text-variant u-text-1"> © Colegiul Național „Tudor Vladimirescu”
             Târgu Jiu<br>„Performanța este Tradiția noastră! Din 1890.”<br>Dezvoltat de <a
                     href="https://github.com/xbl4z3r"

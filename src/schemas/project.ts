@@ -1,11 +1,9 @@
 import mongoose, {Schema} from "mongoose";
-import ImageSchema from "./image";
 
 const ProjectSchema = new Schema({
     title: String,
     content: String,
-    date: Date,
-    thumbnail: ImageSchema
+    date: String
 });
 
 export default mongoose.model('Project', ProjectSchema);
