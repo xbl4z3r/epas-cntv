@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import {join} from 'path';
 import dotenv from 'dotenv';
+import * as fs from "fs";
 
 const app = express();
 dotenv.config();
@@ -31,5 +32,9 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
-    console.log(__dirname)
+    fs.readdir(__dirname, (err, files) => {
+        files.forEach(file => {
+            console.log(file);
+        });
+    });
 });
