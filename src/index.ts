@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import {join} from 'path';
 import dotenv from 'dotenv';
 import * as fs from "fs";
+import * as path from "path";
 
 const app = express();
 dotenv.config();
@@ -32,7 +33,7 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
-    fs.readdir(__dirname, (err, files) => {
+    fs.readdir(path.join(__dirname, '../'), (err, files) => {
         files.forEach(file => {
             console.log(file);
         });
