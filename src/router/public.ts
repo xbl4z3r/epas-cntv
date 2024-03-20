@@ -21,9 +21,14 @@ router.get('/educatie', (req, res) => {
 });
 
 router.get('/despre', async (req, res) => {
+    let year: string = req.query.year as string;
+    const validYears = ['2019', '2020', '2021', '2022', '2023'].reverse();
+    if (!year || !validYears.includes(year)) year = validYears[0];
+
     const team_members = await TeamMemberSchema.find();
-    const projects = await ProjectSchema.find();
+    const projects = await ProjectSchema.find({date: new RegExp(year)});
     const awards = await AwardSchema.find();
+
     // sort by newest first
     awards.sort((a, b) => {
         if (a == null || b == null || a.year == null || b.year == null) return 0;
@@ -31,6 +36,7 @@ router.get('/despre', async (req, res) => {
         if (a.year < b.year) return 1;
         return 0;
     });
+
     const months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
     projects.sort((a, b) => {
         if (a == null || b == null || a.date == null || b.date == null) return 0;
@@ -45,7 +51,7 @@ router.get('/despre', async (req, res) => {
         if (aMonth < bMonth) return 1;
         return 0;
     });
-    res.render('public/despre', {team_members, projects, awards});
+    res.render('public/despre', {team_members, projects, awards, validYears});
 });
 
 router.get('/blog', async (req, res) => {
@@ -143,6 +149,10 @@ router.post('/trivia/:id', async (req, res) => {
 router.get('/flashcards', async (req, res) => {
     const flashcards = await Flashcard.find();
     res.render('public/flashcards', {flashcards});
+});
+
+router.get('/intalniri-mep', (req, res) => {
+    res.render('comingsoon');
 });
 
 // Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours

@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import {join} from 'path';
 import dotenv from 'dotenv';
-import * as fs from "fs";
 import * as path from "path";
+import favicon from "express-favicon";
 
 const app = express();
 dotenv.config();
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "../views"));
-
+app.use(favicon(path.join(__dirname, '../static', 'logo.ico')));
 app.use(express.static(join(__dirname, '../static')));
 
 app.use('/admin', require('./router/admin').default);
@@ -33,9 +33,4 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
-    fs.readdir(path.join(__dirname, '../'), (err, files) => {
-        files.forEach(file => {
-            console.log(file);
-        });
-    });
 });
