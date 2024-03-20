@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import * as path from 'path';
 import {join} from 'path';
 import dotenv from 'dotenv';
-import * as path from "path";
 import favicon from "express-favicon";
 
 const app = express();
