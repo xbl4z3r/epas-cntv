@@ -3,4 +3,4 @@ Disallow: /private/
 Disallow: /tmp/
 Disallow: /admin/
 
-Sitemap: http://epas-cntv.com/sitemap.xml
+Sitemap: https://epas-cntv.com/sitemap.xml

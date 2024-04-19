@@ -152,7 +152,7 @@ router.get('/flashcards', async (req, res) => {
 });
 
 router.get('/intalniri-mep', (req, res) => {
-    res.render('comingsoon');
+    res.render('public/mep');
 });
 
 // Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours
