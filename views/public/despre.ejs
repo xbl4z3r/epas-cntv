@@ -37,14 +37,12 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const ref = urlParams.get('ref');
-        if (ref === 'echipa') document.getElementById('projects').scrollIntoView();
-        else if (ref === 'premii') document.getElementById('social').scrollIntoView();
+        if (ref) document.getElementById(ref).scrollIntoView();
     }
 </script>
 <header class="u-box-shadow u-clearfix u-header u-header" id="sec-a7be">
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="/" class="u-image u-logo u-image-1" data-image-width="236"
-           data-image-height="236" title="EPAS CNTV">
+        <a href="/" class="u-image u-logo u-image-1" data-image-width="236" data-image-height="236" title="EPAS CNTV">
             <img src="/images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
@@ -79,11 +77,11 @@
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre#team">Echipă</a>
+                                            href="/despre#echipa">Echipă</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre#projects">Proiecte</a>
+                                            href="/despre#proiecte">Proiecte</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
@@ -92,6 +90,10 @@
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
                                             href="/despre#social">Social Media</a>
+                                </li>
+                                <li class="u-nav-item"><a
+                                            class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
+                                            href="/despre#mass">Mass Media</a>
                                 </li>
                             </ul>
                         </div>
@@ -110,7 +112,7 @@
                     </li>
                     <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
-                                href="/intalniri-mep" style="padding: 10px 4px;">Întâlniri MEP</a>
+                                href="/intalniri-mep" target="_blank" style="padding: 10px 4px;">Întâlniri MEP</a>
                     </li>
                     <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
@@ -142,16 +144,20 @@
                             <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Despre Noi</a>
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#team">Echipă</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#echipa">Echipă</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="/despre#projects">Proiecte</a>
+                                                                  href="/despre#proiecte">Proiecte</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
                                                                   href="/despre#premii">Premii</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
                                                                   href="/despre#social">Social Media</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#mass">Mass
+                                                Media</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -188,17 +194,18 @@
         </nav>
     </div>
 </header>
-<section class="u-align-center u-clearfix u-palette-1-base u-section-1" id="intro">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-align-center u-text u-text-default u-title u-text-1">Despre Noi</h1>
-        <p class="u-align-center u-large-text u-text u-text-variant u-text-2"> Ambasadorii Juniori reprezintă o echipă
-            dinamică și dedicată de elevi, care sunt pasionați de politici europene, drepturile omului și dezbateri
-            publice. Acești tineri talentați sunt aleși pentru a reprezenta Colegiul Național „Tudor Vladimirescu” în
-            cadrul evenimentelor și proiectelor desfășurate de Parlamentul European pentru a promova implicarea
-            tinerilor în procesele decizionale europene.</p>
+<section class="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-section-1" id="sec-c56f"
+         data-image-width="5000" data-image-height="2500">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-left u-text u-text-body-alt-color u-text-default u-title u-text-1">Despre Noi</h1>
+        <p class="u-align-left u-large-text u-text u-text-body-alt-color u-text-variant u-text-2"> Ambasadorii Juniori
+            reprezintă o echipă dinamică și dedicată de elevi, care sunt pasionați de politici europene, drepturile
+            omului și dezbateri publice. Acești tineri talentați sunt aleși pentru a reprezenta Colegiul Național Tudor
+            Vladimirescu în cadrul evenimentelor și proiectelor desfășurate de Parlamentul European pentru a promova
+            implicarea tinerilor în procesele decizionale europene.</p>
     </div>
 </section>
-<section class="u-align-center u-clearfix u-white u-section-2" id="team">
+<section class="u-align-center u-clearfix u-palette-1-light-3 u-section-2" id="echipa">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Ambasadori Juniori</h1>
         <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
@@ -211,7 +218,8 @@
                 %>
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-<%= count %>">
                     <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <img alt="" class="u-hover-feature u-image u-image-default u-image-1" data-image-width="404"
+                        <img alt="" class="u-hover-feature u-image u-image-round u-radius u-image-1"
+                             data-image-width="404"
                              data-image-height="404" src="<%= profile_picture %>">
                         <h4 class="u-align-center u-text u-text-2">
                             <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1"
@@ -255,34 +263,61 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
 
 </section>
-<section class="u-align-center u-clearfix u-container-align-center u-palette-1-dark-1 u-section-3" id="projects">
+<section class="u-align-center u-clearfix u-container-align-center u-palette-1-dark-1 u-section-3" id="proiecte">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-1">Proiecte</h2>
-        <div class="u-list u-list-1">
+        <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
             <div class="u-repeater u-repeater-1">
                 <%
                 validYears.forEach(year => {
                 %>
-                    <div class="u-container-align-center-xs u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-valign-middle-xs u-container-layout-1">
-                            <a href="/despre?ref=echipa&year=<%= year %>"
-                               class="u-align-center-xs u-btn u-btn-round u-button-style u-custom-item u-radius u-btn-1"><%= year %>/<%=parseInt(year)+1 %></a>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <a href="/despre?ref=premii&year=<%= year %>"
+                               class="u-align-center u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-1 u-radius u-btn-1"><%= year %>
+                                /<%= parseInt(year) + 1 %></a>
                         </div>
                     </div>
                 <%
                 });
                 %>
             </div>
+            <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1"
+               href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+                <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            </a>
+            <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2"
+               href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+                <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            </a>
         </div>
         <div class="u-expanded-width u-layout-horizontal u-list u-list-2">
             <div class="u-repeater u-repeater-2">
                 <%
                 projects.forEach(project => {
                 %>
-                    <div class="u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-6">
+                    <div class="u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-4">
                             <div class="custom-expanded u-container-style u-group u-palette-1-light-3 u-radius u-shape-round u-group-1">
-                                <div class="u-container-layout u-valign-top u-container-layout-7">
+                                <div class="u-container-layout u-valign-top u-container-layout-5">
                                     <h3 class="u-text u-text-default u-text-2"><%= project.title %></h3>
                                     <h6 class="u-text u-text-default u-text-3"><%= project.date %></h6>
                                     <p class="u-text u-text-4"><%= project.content %></p>
@@ -323,7 +358,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
     </div>
 </section>
-<section class="u-align-center u-clearfix u-container-align-center u-white u-section-4" id="premii">
+<section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-4" id="premii">
     <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-1">Premii</h2>
         <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
@@ -381,8 +416,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
     </div>
 </section>
-<section class="u-clearfix u-container-align-center u-grey-10 u-section-5" id="social">
-    <div class="u-clearfix u-sheet u-sheet-1">
+<section class="u-clearfix u-container-align-center u-palette-1-dark-1 u-section-5" id="social">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-18 u-layout-wrap u-layout-wrap-1">
             <div class="u-gutter-0 u-layout">
                 <div class="u-layout-row">
@@ -390,76 +425,49 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <div class="u-layout-row">
                             <div class="u-align-left u-container-style u-layout-cell u-left-cell u-radius u-shape-round u-size-60 u-white u-layout-cell-1"
                                  src="">
-                                <div class="u-container-layout u-container-layout-1" src="">
-                                    <h2 class="u-text u-text-1">Facebook </h2><span class="u-file-icon u-icon u-icon-1"><img
-                                                src="images/5968764.png" alt=""></span>
+                                <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-1"
+                                     src="">
+                                    <h2 class="u-text u-text-black u-text-1">Fa​​​cebook </h2><span
+                                            class="u-file-icon u-icon u-icon-1"><img src="/images/5968764.png"
+                                                                                     alt=""></span>
                                     <h4 class="u-text u-text-2">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.facebook.com/CNTV.ScoalaAsociataUNESCO">CNTV Scoala
-                                            UNESCO</a>
+                                           data-href="#" href="https://www.facebook.com/CNTV.ScoalaAsociataUNESCO">CNTV
+                                            Scoala UNESCO</a>
                                     </h4>
                                     <h4 class="u-text u-text-3">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"
-                                           data-href="https://nicepage.com" href="https://www.facebook.com/EPAS.CNTV">EPAS
-                                            CNTV</a>
+                                           data-href="#" href="https://www.facebook.com/EPAS.CNTV">EPAS CNTV</a>
                                     </h4>
                                     <h4 class="u-text u-text-4">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.facebook.com/CNTVtargujiu">CNTV Targu Jiu</a>
-                                    </h4><span class="u-file-icon u-icon u-icon-2"><img src="images/174855.png" alt=""></span>
-                                    <h2 class="u-text u-text-5">Instagram </h2>
+                                           data-href="#" href="https://www.facebook.com/CNTVtargujiu">CNTV Targu Jiu</a>
+                                    </h4><span class="u-file-icon u-icon u-icon-2"><img src="/images/174855.png" alt=""></span>
+                                    <h2 class="u-text u-text-black u-text-5">Instagram </h2>
                                     <h4 class="u-text u-text-6">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4"
-                                           data-href="https://nicepage.com"
+                                           data-href="#"
                                            href="https://www.instagram.com/cse.cntv?igsh=YmViMzR0OW55dDBv">@cse.cntv</a>
                                     </h4>
                                     <h4 class="u-text u-text-7">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5"
-                                           data-href="https://nicepage.com"
+                                           data-href="#"
                                            href="https://www.instagram.com/epascntv?igsh=MWZtbmw4ZDJtMjN3OA==">@epascntv</a>
                                     </h4>
                                     <h4 class="u-text u-text-8">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6"
-                                           data-href="https://nicepage.com"
+                                           data-href="#"
                                            href="https://www.instagram.com/cntvtargujiu?igsh=MWlhZHFrYjE2b25mcw==">@​cntvtargujiu</a>
                                     </h4>
                                     <h4 class="u-text u-text-9">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7"
-                                           data-href="https://nicepage.com"
+                                           data-href="#"
                                            href="https://www.instagram.com/epas_romania?igsh=N3ZxMW9keGNsenNo">@epas_romania</a>
-                                    </h4><span class="u-file-icon u-icon u-icon-3"><img src="images/737855.png" alt=""></span>
-                                    <h2 class="u-text u-text-10">Mass Media </h2>
+                                    </h4><span class="u-file-icon u-icon u-icon-3"><img src="/images/174883.png" alt=""></span>
+                                    <h2 class="u-text u-text-black u-text-10">YouTube</h2>
                                     <h4 class="u-text u-text-11">
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.pandurul.ro/articol/elevi-si-profesori-de-la-cntv-felicitati-de-comisi_170370.html">Elevi
-                                            si profesori felicitati...</a>
-                                    </h4>
-                                    <h4 class="u-text u-text-12">
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9"
-                                           data-href="https://www.pandurul.ro/articol/activitati-in-scoala-altfel-desfasurate-de-ambasad_169010.html">
-                                            <font color="#0a5794">Activitati in scoala altfel...</font>
-                                        </a>
-                                    </h4>
-                                    <h4 class="u-text u-text-13">
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.pandurul.ro/articol/activitati-desfasurate-cu-ocazia-zilei-internation_168905.html">Activitati
-                                            desfasurate cu...</a>
-                                    </h4>
-                                    <h4 class="u-text u-text-14">
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.pandurul.ro/articol/joc-de-bingo-organizat-de-elevi-se-acorda-premii_168838.html">Joc
-                                            de bingo organizat...</a>
-                                    </h4>
-                                    <h4 class="u-text u-text-15">
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12"
-                                           data-href="https://nicepage.com"
-                                           href="https://www.pandurul.ro/articol/brad-care-promveza-obiectivele-ue-la-cntv_168805.html">Brad
-                                            care promoveaza...</a>
+                                           data-href="#" href="https://www.youtube.com/@epascntvtargujiu">EPAS CNTV</a>
                                     </h4>
                                 </div>
                             </div>
@@ -471,17 +479,122 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                  data-image-width="1600" data-image-height="565">
                                 <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
                             </div>
-                            <div class="u-align-left u-container-style u-layout-cell u-palette-1-dark-1 u-radius u-right-cell u-shape-round u-size-20 u-layout-cell-3"
+                            <div class="u-align-left u-container-style u-layout-cell u-palette-1-light-1 u-radius u-right-cell u-shape-round u-size-20 u-layout-cell-3"
                                  src="">
                                 <div class="u-container-layout u-valign-middle u-container-layout-3">
-                                    <h1 class="u-text u-text-default u-text-16">Social Media </h1>
-                                    <p class="u-text u-text-default u-text-17"> Ambasadorii Juniori te îndeamnă sa fii
+                                    <h1 class="u-text u-text-default u-text-12">Social Media </h1>
+                                    <p class="u-text u-text-default u-text-13"> Ambasadorii Juniori te îndeamnă sa fii
                                         la curent cu noutățile și evenimentele noastre!</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-palette-1-light-3 u-section-6" id="mass">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">Mass Media</h2>
+        <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius u-shape-round u-group-1">
+            <div class="u-container-layout u-valign-top u-container-layout-1">
+                <h1 class="u-text u-text-default u-text-2">2023-20<span style="font-weight: 700;"></span>24<br>
+                </h1>
+                <a href="https://www.youtube.com/watch?v=owXajzCi6zc"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">
+                    Emisiune AccentTV</a>
+                <a href="https://open.spotify.com/episode/7hsHJVAfCtJkTjoFZKYyZb?si=AbaWFAHXSK2Mpb9qD-JN7w"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"><b><i>Podcast</i></b>
+                </a>
+                <a href="https://www.pandurul.ro/articol/activitati-in-scoala-altfel-desfasurate-de-ambasad_169010.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-3"><b><i>Școala
+                            Altfel</i></b>
+                </a>
+                <a href="https://www.pandurul.ro/articol/ziua-onu-sarbatorita-la-targu-jiu_167203.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-4"><b><i>Ziua
+                            ONU</i></b>
+                </a>
+                <a href="https://www.asingorj.ro/elevii-de-la-liceul-tudor-vladimirescu-in-dialog-cu-reprezentantii-parlamentului-european/"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-5"><b><i>Întâlnire
+                            Roberta Metsola București</i></b>
+                </a>
+                <a href="https://www.pandurul.ro/articol/brad-care-promveza-obiectivele-ue-la-cntv_168805.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-6"><b><i>Brad
+                            UE</i></b>
+                </a>
+            </div>
+        </div>
+        <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius u-shape-round u-group-2">
+            <div class="u-container-layout u-valign-top-xs u-container-layout-2">
+                <h1 class="u-text u-text-3">2022-2023<br>
+                </h1>
+                <a href="https://fb.watch/fZq836KeDe/"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-7"><b><i>Emisiune
+                            AccentTV – Școală Ambasador&nbsp;</i></b>
+                </a>
+                <a href="https://multimedia.europarl.europa.eu/en/photoset/euroscola_20221021_EP-135235B_GEN_0009"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"><b><i></i></b><b><i>Euroscola
+                            Strasbourg&nbsp;</i></b><b><i>&nbsp;</i></b>
+                </a>
+                <a href="https://www.igj.ro/actualitate/18-elevi-si-profesori-de-la-un-colegiu-din-targu-jiu-la-parlamentul-european.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-9"><b><i></i></b><b><i>IGJ
+                            – eveniment Euroscola&nbsp;</i></b>
+                </a>
+                <a href="https://www.pandurul.ro/articol/de-la-local-la-global-promvarea-femeilor-intr-o-lu_160401.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-10"><b><i></i></b><b><i>Pandurul
+                            – International Womens Day</i></b>
+                </a>
+                <a href="https://www.gorjonline.ro/eleva-de-la-cntv-premiata/"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-11"><b><i></i></b><b><i>GorjOnline
+                            – Made For Europe</i></b>
+                </a>
+                <a href="https://youtu.be/1WKDabYtpvs"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-white u-btn-12"><b><i></i></b><b><i>Podcast
+                            1 Plus TV– Școală Ambasador</i></b>
+                </a>
+            </div>
+        </div>
+        <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius u-shape-round u-group-3">
+            <div class="u-container-layout u-container-layout-3">
+                <h1 class="u-text u-text-default u-text-4">2021-2022<br>
+                </h1>
+                <a href="https://www.igj.ro/actualitate/petitie-online-de-igienizare-a-lacului-de-acumulare-de-pe-jiu-initiata-de-liceenii-de-la-cntv.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-13"><b><i>Petiție
+                            ecologizare Jiu</i></b>
+                </a>
+                <a href="https://adevarul.ro/locale/targu-jiu/cum-reusit-liceu-gorj-vaccineze-covid-19-aproape-angajatii-1_617dbdb45163ec4271fef3ba/index.html"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-14">
+                    C<b><i>ampanie vaccinare COVID</i></b>
+                </a>
+                <div class="u-container-style u-expanded-width u-group u-palette-1-base u-radius u-shape-round u-group-4">
+                    <div class="u-container-layout u-container-layout-4">
+                        <h1 class="u-text u-text-default u-text-5">2019-2020<br>
+                        </h1>
+                        <a href="https://www.pandurul.ro/articol/un-europarlamentar-la-cntv_121359.html"
+                           class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-15"><b><i></i></b><b><i>Vizită
+                                    la CNTV</i></b>
+                        </a>
+                        <a href="https://gorjeanul.ro/colegiul-national-tudor-vladimirescu-targu-jiu-candidat-la-titlul-de-scoala-ambasador-a-parlamentului-european/"
+                           class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-16"><b><i>Oferirea
+                                    titlului de Școală Ambasador</i></b><b><i></i></b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius u-shape-round u-group-5">
+            <div class="u-container-layout u-valign-top-xs u-container-layout-5">
+                <h1 class="u-text u-text-6">2020-2021<br>
+                </h1>
+                <a href="https://tele3.ro/2021/05/04/cntv-scoala-ambasador-a-parlamentului-european/"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-17"><b><i></i></b><b><i>Conferința
+                            ”The Future of Europe”</i></b>
+                </a>
+                <a href="https://gorjeanul.ro/qa-despre-viitorul-europei-cu-marian-jean-marinescu/"
+                   class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-18"><b><i></i></b><b><i></i></b><b><i>Q&amp;A
+                            - MPE Marian Jean Marinescu&nbsp;</i></b><b><i>&nbsp;</i></b>
+                </a>
             </div>
         </div>
     </div>

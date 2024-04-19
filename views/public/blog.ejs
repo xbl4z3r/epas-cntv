@@ -31,8 +31,7 @@
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
 <header class="u-box-shadow u-clearfix u-header u-header" id="sec-a7be">
     <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="/" class="u-image u-logo u-image-1" data-image-width="236"
-           data-image-height="236" title="EPAS CNTV">
+        <a href="/" class="u-image u-logo u-image-1" data-image-width="236" data-image-height="236" title="EPAS CNTV">
             <img src="/images/logo-cntv-xxsmall.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1"
@@ -67,11 +66,11 @@
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre#team">Echipă</a>
+                                            href="/despre#echipa">Echipă</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
-                                            href="/despre#projects">Proiecte</a>
+                                            href="/despre#proiecte">Proiecte</a>
                                 </li>
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
@@ -80,6 +79,10 @@
                                 <li class="u-nav-item"><a
                                             class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
                                             href="/despre#social">Social Media</a>
+                                </li>
+                                <li class="u-nav-item"><a
+                                            class="u-button-style u-nav-link u-palette-1-light-2 u-text-body-color"
+                                            href="/despre#mass">Mass Media</a>
                                 </li>
                             </ul>
                         </div>
@@ -98,7 +101,7 @@
                     </li>
                     <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
-                                href="/intalniri-mep" style="padding: 10px 4px;">Întâlniri MEP</a>
+                                href="/intalniri-mep" target="_blank" style="padding: 10px 4px;">Întâlniri MEP</a>
                     </li>
                     <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-1-light-1"
@@ -130,16 +133,20 @@
                             <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre">Despre Noi</a>
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#team">Echipă</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                  href="/despre#echipa">Echipă</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                                  href="/despre#projects">Proiecte</a>
+                                                                  href="/despre#proiecte">Proiecte</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
                                                                   href="/despre#premii">Premii</a>
                                         </li>
                                         <li class="u-nav-item"><a class="u-button-style u-nav-link"
                                                                   href="/despre#social">Social Media</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/despre#mass">Mass
+                                                Media</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -203,7 +210,7 @@
                                                                               class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
                                                                               src="<%= thumbnail %>"></a>
                         <div class="u-blog-control u-post-content u-text u-text-4 fr-view">
-                            <%= post.content > 100 ? post.content.substring(0, 100) + '...' : post.content %>
+                            <%= post.content.length > 256 ? post.content.substring(0, 256) + '...' : post.content %>
                         </div>
                         <a href="<%= href %>"
                            class="u-blog-control u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-btn-1">

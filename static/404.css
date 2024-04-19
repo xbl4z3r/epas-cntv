@@ -93,10 +93,10 @@
     border-color: transparent !important;
 }
 
-.u-section-1 .u-container-layout:hover .u-btn-1 {
+.u-container-layout:hover > .u-section-1 .u-btn-1 {
     transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }
 
-.u-container-layout.hover .u-section-1 .u-btn-1 {
+.u-container-layout.hover > .u-section-1 .u-btn-1 {
     transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }
