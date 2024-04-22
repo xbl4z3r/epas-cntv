@@ -29,6 +29,14 @@ router.get('/despre', async (req, res) => {
     const projects = await ProjectSchema.find({date: new RegExp(year)});
     const awards = await AwardSchema.find();
 
+    // sort members alphabetically
+    team_members.sort((a, b) => {
+        if (a == null || b == null || a.name == null || b.name == null) return 0;
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    });
+
     // sort by newest first
     awards.sort((a, b) => {
         if (a == null || b == null || a.year == null || b.year == null) return 0;
