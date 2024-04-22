@@ -155,6 +155,10 @@ router.get('/intalniri-mep', (req, res) => {
     res.render('public/mep');
 });
 
+router.get('/vizite', (req, res) => {
+    res.render('public/vizite');
+});
+
 // Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours
 setInterval(() => {
     console.log('Deleting old trivia sessions...')
