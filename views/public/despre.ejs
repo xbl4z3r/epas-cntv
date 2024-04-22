@@ -279,7 +279,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 %>
                     <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-1">
-                            <a href="/despre?ref=premii&year=<%= year %>"
+                            <a href="/despre?ref=proiecte&year=<%= year %>"
                                class="u-align-center u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-light-1 u-radius u-btn-1"><%= year %>
                                 /<%= parseInt(year) + 1 %></a>
                         </div>
@@ -319,11 +319,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             <div class="u-repeater u-repeater-2">
                 <%
                 projects.forEach(project => {
+                    let image = "/images/6909624-0.jpeg";
+                    if(project.thumbnail) image = `data:${project.thumbnail.contentType};base64,${project.thumbnail.data}`
                 %>
                     <div class="u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-4">
                             <div class="custom-expanded u-container-style u-group u-palette-1-light-3 u-radius u-shape-round u-group-1">
                                 <div class="u-container-layout u-valign-top u-container-layout-5">
+                                    <img class="u-image u-image-round u-radius u-image-1" src="<%= image %>" alt="Project Thumbnail" data-image-width="2000" data-image-height="1000">
                                     <h3 class="u-text u-text-default u-text-2"><%= project.title %></h3>
                                     <h6 class="u-text u-text-default u-text-3"><%= project.date %></h6>
                                     <p class="u-text u-text-4"><%= project.content %></p>
