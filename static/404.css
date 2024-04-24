@@ -1,102 +1,102 @@
-.u-section-1 {
-    background-image: none;
+ .u-section-1 {
+  background-image: none;
 }
 
 .u-section-1 .u-sheet-1 {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .u-section-1 .u-text-1 {
-    margin: 564px 0 0;
+  margin: 564px 0 0;
 }
 
 .u-section-1 .u-text-2 {
-    width: 826px;
-    margin: 13px auto 0;
+  width: 826px;
+  margin: 13px auto 0;
 }
 
 .u-section-1 .u-btn-1 {
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    align-self: center;
-    transition-duration: 0.5s;
-    --radius: 50px;
-    margin: 50px auto 0;
-    padding: 19px 47px 20px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  align-self: center;
+  transition-duration: 0.5s;
+  --radius: 50px;
+  margin: 50px auto 0;
+  padding: 19px 47px 20px;
 }
 
 @media (max-width: 1199px) {
-    .u-section-1 .u-text-1 {
-        margin-top: 489px;
-        margin-right: auto;
-        margin-left: 12px;
-    }
+  .u-section-1 .u-text-1 {
+    margin-top: 489px;
+    margin-right: auto;
+    margin-left: 12px;
+  }
 
-    .u-section-1 .u-text-2 {
-        margin-left: 57px;
-        margin-right: 57px;
-    }
+  .u-section-1 .u-text-2 {
+    margin-left: 57px;
+    margin-right: 57px;
+  }
 
-    .u-section-1 .u-btn-1 {
-        transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-    }
+  .u-section-1 .u-btn-1 {
+    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  }
 }
 
 @media (max-width: 991px) {
-    .u-section-1 .u-text-2 {
-        width: 720px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .u-section-1 .u-text-2 {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 767px) {
-    .u-section-1 .u-text-1 {
-        margin-top: 463px;
-    }
+  .u-section-1 .u-text-1 {
+    margin-top: 463px;
+  }
 
-    .u-section-1 .u-text-2 {
-        width: 540px;
-    }
+  .u-section-1 .u-text-2 {
+    width: 540px;
+  }
 }
 
 @media (max-width: 575px) {
-    .u-section-1 .u-text-1 {
-        margin-top: 519px;
-    }
+  .u-section-1 .u-text-1 {
+    margin-top: 519px;
+  }
 
-    .u-section-1 .u-text-2 {
-        width: 340px;
-    }
+  .u-section-1 .u-text-2 {
+    width: 340px;
+  }
 }
 
 .u-section-1 .u-btn-1,
 .u-section-1 .u-btn-1:before,
 .u-section-1 .u-btn-1 > .u-container-layout:before {
-    transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
 }
 
 .u-section-1 .u-btn-1.u-btn-1.u-btn-1:hover {
-    transform: scale(1.1) translateX(0px) translateY(0px) !important;
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
 }
 
 .u-section-1 .u-btn-1 {
-    border-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .u-section-1 .u-btn-1.u-btn-1.u-btn-1.hover {
-    transform: scale(1.1) translateX(0px) translateY(0px) !important;
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
 }
 
 .u-section-1 .u-btn-1 {
-    border-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .u-container-layout:hover > .u-section-1 .u-btn-1 {
-    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }
 
 .u-container-layout.hover > .u-section-1 .u-btn-1 {
-    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }
