@@ -22,11 +22,12 @@ router.get('/educatie', (req, res) => {
 
 router.get('/despre', async (req, res) => {
     let year: string = req.query.year as string;
-    const validYears = ['2019', '2020', '2021', '2022', '2023'].reverse();
+    const validYears = ['2019', '2020', '2021', '2022'].reverse();
     if (!year || !validYears.includes(year)) year = validYears[0];
 
     const team_members = await TeamMemberSchema.find();
-    const projects = await ProjectSchema.find({date: new RegExp(year)});
+    const projects1 = await ProjectSchema.find({date: new RegExp(year)});
+    const projects2 = await ProjectSchema.find({date: new RegExp((parseInt(year)+1).toString())});
     const awards = await AwardSchema.find();
 
     // sort members alphabetically
@@ -45,7 +46,22 @@ router.get('/despre', async (req, res) => {
         return 0;
     });
 
-    const months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+    const  projects: any[] = [];
+
+    const months1 = ['septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+    const months2 = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august'];
+    const months = months1.concat(months2);
+
+    projects1.forEach(project => {
+        // @ts-ignore
+        if(months1.includes(project.date.split(' ')[0])) projects.push(project)
+    });
+
+    projects2.forEach(project => {
+        // @ts-ignore
+        if(months2.includes(project.date.split(' ')[0])) projects.push(project)
+    });
+
     projects.sort((a, b) => {
         if (a == null || b == null || a.date == null || b.date == null) return 0;
         // date is in format "month numericYear"
@@ -59,6 +75,7 @@ router.get('/despre', async (req, res) => {
         if (aMonth < bMonth) return 1;
         return 0;
     });
+
     res.render('public/despre', {team_members, projects, awards, validYears});
 });
 
