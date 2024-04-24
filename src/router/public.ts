@@ -22,7 +22,7 @@ router.get('/educatie', (req, res) => {
 
 router.get('/despre', async (req, res) => {
     let year: string = req.query.year as string;
-    const validYears = ['2019', '2020', '2021', '2022'].reverse();
+    const validYears = ['2019', '2020', '2021', '2022', '2023'].reverse();
     if (!year || !validYears.includes(year)) year = validYears[0];
 
     const team_members = await TeamMemberSchema.find();
