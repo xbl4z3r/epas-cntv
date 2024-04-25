@@ -579,6 +579,7 @@
 .u-section-3 .u-list-2 {
   margin-top: 24px;
   margin-bottom: 60px;
+  min-height: 375px;
 }
 
 .u-section-3 .u-repeater-2 {
@@ -738,16 +739,19 @@
 
 .u-section-3 .u-gallery-nav-3 {
   position: absolute;
-  left: 10px;
+  left: 0;
   width: 40px;
   height: 40px;
+  top: 96px;
 }
 
 .u-section-3 .u-gallery-nav-4 {
   position: absolute;
-  right: 10px;
   width: 40px;
   height: 40px;
+  left: auto;
+  top: 96px;
+  right: 0;
 }
 
 @media (max-width: 1199px) {
