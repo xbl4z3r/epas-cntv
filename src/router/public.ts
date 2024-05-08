@@ -120,7 +120,7 @@ router.get('/trivia', async (req, res) => {
             questions[i].answers = answers;
             questions[i].correctAnswerIndex = answers.indexOf(correctAnswer);
         }
-        const session = new TriviaSession({questions, name: username, startedAt: new Date(), score: 0, progress: 0});
+        const session = new TriviaSession({questions, name: username, startedAt: new Date(), finishedAt: null, score: 0, progress: 0});
         await session.save();
         return res.redirect('/trivia/' + session._id);
     } else {
@@ -134,8 +134,8 @@ router.get('/trivia/:id', async (req, res) => {
         if (session) {
             if ((session.progress || 0) >= session.questions.length) {
                 res.render('public/trivia_end', {session});
-                TriviaSession.findByIdAndDelete(session._id).then(r => {
-                });
+                session.finishedAt = new Date();
+                await session.save();
                 return;
             }
             res.render('public/trivia', {session});
@@ -183,14 +183,5 @@ router.get('/intalniri-mep', (req, res) => {
 router.get('/vizite', (req, res) => {
     res.render('public/vizite');
 });
-
-// Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours
-setInterval(() => {
-    console.log('Deleting old trivia sessions...')
-    const sixHoursAgo = new Date(new Date().getTime() - 6 * 60 * 60 * 1000);
-    TriviaSession.deleteMany({startedAt: {$lt: sixHoursAgo}}).then(r => {
-        console.log('Deleted ' + r.deletedCount + ' sessions!');
-    });
-}, 6 * 60 * 60 * 1000);
 
 export default router;

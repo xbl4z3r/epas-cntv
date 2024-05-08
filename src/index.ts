@@ -5,6 +5,7 @@ import * as path from 'path';
 import {join} from 'path';
 import dotenv from 'dotenv';
 import favicon from "express-favicon";
+import {TriviaSession} from "./schemas/trivia";
 
 const app = express();
 dotenv.config();
@@ -12,6 +13,11 @@ dotenv.config();
 // @ts-ignore
 mongoose.connect(process.env.DATABASE_URI).then(r => {
     console.log('Successfully connected to the database!');
+    purgeOldTriviaSessions()
+    // Check every 6 hours all the trivia sessions and delete the ones that are older than 6 hours
+    setInterval(() => {
+        purgeOldTriviaSessions()
+    }, 6 * 60 * 60 * 1000);
 }).catch(e => {
     console.log('Error connecting to the database!');
     console.log(e);
@@ -34,3 +40,14 @@ app.get('*', (req, res) => {
 app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
+
+const purgeOldTriviaSessions = () => {
+    console.log('Deleting old trivia sessions...')
+    const sixHoursAgo = new Date(Date.now() - 6 * 60 * 60 * 1000);
+    TriviaSession.find({startedAt: {$lt: sixHoursAgo}}).then(sessions => {
+        sessions.forEach(session => {
+            if (session.finishedAt == null) TriviaSession.findByIdAndDelete(session._id).then(r => {
+            });
+        });
+    });
+}

@@ -12,6 +12,7 @@ const TriviaSessionSchema = new Schema({
     questions: [TriviaQuestionSchema],
     name: String,
     startedAt: Date,
+    finishedAt: Date || null,
     score: Number,
     progress: Number,
 });

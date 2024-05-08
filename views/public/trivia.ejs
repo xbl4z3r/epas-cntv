@@ -30,6 +30,10 @@
                 const answerButtons = document.querySelectorAll('.u-group-1');
                 if (!data.success) answerButtons[answerId].style.backgroundColor = 'red';
                 answerButtons[data.correctAnswerIndex].style.backgroundColor = 'green';
+                answerButtons.forEach((button, index) => {
+                    button.style.cursor = 'default';
+                    if (index !== data.correctAnswerIndex) button.style.pointerEvents = 'none';
+                });
                 setTimeout(() => {
                     window.location.reload();
                 }, 2500);
