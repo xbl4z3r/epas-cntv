@@ -39,6 +39,9 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
+    setInterval(() => {
+        selfPing()
+    }, 30 * 1000);
 });
 
 const purgeOldTriviaSessions = () => {
@@ -50,4 +53,8 @@ const purgeOldTriviaSessions = () => {
             });
         });
     });
+}
+
+const selfPing = () => {
+    require('http').get('http://epas-cntv.com', () => {});
 }
