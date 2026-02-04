@@ -10,6 +10,11 @@ import {TriviaSession} from "./schemas/trivia";
 const app = express();
 dotenv.config();
 
+const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE === 'true';
+if (MAINTENANCE_MODE) {
+    console.log('Maintenance mode enabled!');
+}
+
 // @ts-ignore
 mongoose.connect(process.env.DATABASE_URI).then(r => {
     console.log('Successfully connected to the database!');
@@ -30,8 +35,14 @@ app.set("views", path.join(__dirname, "../views"));
 app.use(favicon(path.join(__dirname, '../static', 'logo.ico')));
 app.use(express.static(join(__dirname, '../static')));
 
-app.use('/admin', require('./router/admin').default);
-app.use('/', require('./router/public').default);
+if(!MAINTENANCE_MODE) {
+    app.use('/admin', require('./router/admin').default);
+    app.use('/', require('./router/public').default);
+} else {
+    app.get('/', (req, res) => {
+        res.send(process.env.MAINTENANCE_MESSAGE || 'Site in maintenance mode!');
+    })
+}
 
 app.get('*', (req, res) => {
     res.render('notfound');
