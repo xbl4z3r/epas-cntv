@@ -8,8 +8,8 @@
     "build": "tsc",
     "dev": "tsc && node dist/index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "xbl4z3r",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",

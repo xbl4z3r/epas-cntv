@@ -48,11 +48,14 @@ app.get('*', (req, res) => {
     res.render('notfound');
 });
 
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
-    setInterval(() => {
-        selfPing()
-    }, 30 * 1000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+    if (process.env.ENABLE_SELF_PING === 'true') {
+        setInterval(() => {
+            selfPing()
+        }, 30 * 1000);
+    }
 });
 
 const purgeOldTriviaSessions = () => {
@@ -67,5 +70,6 @@ const purgeOldTriviaSessions = () => {
 }
 
 const selfPing = () => {
-    require('http').get('http://epas-cntv.com', () => {});
-}
+    const pingUrl = process.env.APP_URL || 'http://epas-cntv.com';
+    require('http').get(pingUrl, () => {});
+};
